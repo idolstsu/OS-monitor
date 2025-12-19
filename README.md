@@ -8,4 +8,12 @@ sudo rmmod tsulab // выгрузка модуля
 
 modinfo tsulab.ko // информация о модуле
 
-sudo journalctl --since "1 hour ago" | grep kernel // просмотр логов
+sudo journalctl --since "1 hour ago" | grep kernel // просмотр логов ядра
+
+cat /proc/tsu // чтение из /proc файла
+
+sudo dmesg | tail -10 // просмотр логов ядра (альтернатива)
+
+make clean // очистка собранных файлов
+
+make // сборка модуля
